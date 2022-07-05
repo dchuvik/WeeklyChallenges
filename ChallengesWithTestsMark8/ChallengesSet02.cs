@@ -16,21 +16,19 @@ namespace ChallengesWithTestsMark8
             {
                 return false;
             }
-            throw new NotImplementedException();
         }
 
         public bool CountOfElementsIsEven(string[] vals) //done
         {
-                if (vals.Length % 2 == 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-        
-            throw new NotImplementedException();
+            if (vals.Length % 2 == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
         public bool IsNumberEven(int number) //done
@@ -43,19 +41,20 @@ namespace ChallengesWithTestsMark8
             {
                 return false;
             }
-            throw new NotImplementedException();
         }
 
         public bool IsNumberOdd(int num) //done
         {
-            if (num % 2 != 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            //if (num % 2 != 0)
+            //{
+            //    return true;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+
+            return (num % 2 != 0);
 
         }
 
@@ -69,7 +68,7 @@ namespace ChallengesWithTestsMark8
             {
                 return (numbers.Min() + numbers.Max());
             }
-            
+
         }
 
         public int GetLengthOfShortestString(string str1, string str2) //done
@@ -85,12 +84,14 @@ namespace ChallengesWithTestsMark8
                 return 0;
             }
 
-            int sum = 0;
-            foreach (int num in numbers)
-            {
-               sum += num;
-            }
-            return sum;
+            //int sum = 0;
+            //foreach (int num in numbers)
+            //{
+            //   sum += num;
+            //}
+            //return sum;
+
+            return numbers.Sum();
         }
 
         public int SumEvens(int[] numbers)
@@ -129,17 +130,24 @@ namespace ChallengesWithTestsMark8
             if (sum % 2 != 0)
             {
                 return true;
-            } else return false;
+            }
+            else return false;
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            List<long> numbers = new List<long>();
-            for (int i = 1; i < number; i += 2)
+            //List<long> numbers = new List<long>();
+            //for (int i = 1; i < number; i += 2)
+            //{
+            //    numbers.Add(i);
+            //}
+            //return numbers.Count;
+
+            if (number <= 0)
             {
-                numbers.Add(i);
+                return 0;
             }
-            return numbers.Count;
+            return number / 2;
         }
     }
 }
